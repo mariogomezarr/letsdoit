@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg, #355c7d,#355c7d);
+    color: white;
+    font-family: 'Playfair Display', sans-serif;
+    min-height: 100vh;
+}
+
+
+.error {
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    /* background-color:red; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: white;
+    font-size: 0.8rem;
+    /* font-style: italic; */
+    opacity: 0.5;
+}
+
+footer a:link,
+footer a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 1rem;  /* Modificar este valor para incrementar el tamaño de la caja. */
+    border: none;
+    background: white;
+    outline: none;
+    min-width: 20%;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+form button {
+    color: #355c7d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 5%;
+    max-width: 5%;
+}
+
+form button:hover {
+    color: white;
+    background: #355c7d;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+.todo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    /* background-color: red; */
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.3rem; /* Para cambiar el color de lo que se crea, debe ser acorde al de arriba. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s ease;
+
+}
+
+.todo li {
+    flex: 1; /* Para empujar todos los botones y dejarlos al final. */
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+.trash-btn, .completed-btn {
+    background: #393e46;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.completed-btn {
+    background: #00adb5;}
+
+.todo-item {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none; /* Básicamente es como decir ''no puedes dar clic aquí nunca más, se torna invisible en términos de acción. */
+}
+
+.completed {
+    /* text-decoration: line-through; /* -- La clase a la que ahora corresponde el botón checked anexado desde JS */
+    opacity: 0.5;
+    color: rgb(167, 167, 167);
+    font-style: italic;
+    transform: translateX(1rem);
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(21deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #355c7d;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.6rem;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.select {
+    /* background: red; */
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #393e46;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background:white;
+    color: #393e46;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------- */
+button,
+input {
+    outline: none;
+}
+
+
+
+.todo:hover {
+    background: #ddd;
+}
+
+
+option {
+    padding: 1rem !important;
+}
+
+
+
+
+@media screen and (max-width: 786px) {
+    header h1 {
+        font-size: 28px;
+    }
+    form input {
+        width: 80%;
+    }
+    .todo-item {
+        font-size: 18px;
+    }
+}
