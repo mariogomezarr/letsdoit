@@ -27,8 +27,8 @@ body {
 footer {
     /* background-color:red; */
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 1rem;
+    right: 1rem;
     font-weight: 400;
     font-family: sans-serif;
     color: white;
