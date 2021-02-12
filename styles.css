@@ -199,14 +199,26 @@ option {
 
 
 
-@media screen and (max-width: 786px) {
+media screen and (max-width: 786px) {
     header h1 {
         font-size: 28px;
     }
     form input {
-        width: 80%;
+        width: 50%;
     }
     .todo-item {
         font-size: 18px;
     }
+
+    select {
+        width: 70%;
+    }
+
+    form {
+        flex-wrap: wrap;
+    }
+    form button {
+        min-width: 10%;
+        align-items: center;
+    }   
 }
