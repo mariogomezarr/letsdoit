@@ -201,7 +201,7 @@ option {
 
 
 
-media screen and (max-width: 786px) {
+@media screen and (max-width: 786px) {
     header h1 {
         font-size: 28px;
     }
@@ -222,5 +222,6 @@ media screen and (max-width: 786px) {
     form button {
         min-width: 10%;
         align-items: center;
-    }   
+    }
+    
 }
